@@ -1,47 +1,48 @@
-# Jenu-Gumpu: How to Run the Project
+Jenu-Gumpu (ಜೇನು ಗುಂಪು) 🍯
+A Digital Collective for Tribal Honey Hunters
 
-This project consists of an **Android Application** (frontend) and a **Node.js Express Server** (backend). Follow these steps to get everything running locally.
+Jenu-Gumpu is an Android application designed to empower tribal and rural honey hunters. It provides a digital platform to manage their harvest, improve product quality through grading, and achieve better market value through a collective bargaining model. The app acts as a "Honey Producer’s Collective," transforming the honey hunter into a brand owner.
 
-## 1. Prerequisites
-- **Node.js** (v14 or higher)
-- **Android Studio** (Hedgehog or later recommended)
-- **Android Emulator** or a physical device
+🌟 Key Features
+📝 Harvest Log: Record the date, location, quantity, floral source (e.g., Coffee blossom, Wildflower), and grade of honey collected to maintain a digital history of production.
+⚖️ Grading Tool: A visual guide to check honey quality, including simulated moisture tests to ensure the product meets market standards. Utilizes visual icons for accessibility.
+💰 Profit Calculator: A logic-based tool that calculates estimated earnings after accounting for filtering, bottling, transport costs, and current retail prices.
+📊 Collective Stock & Charts: A dashboard counter that shows the "Total Stock" and visualizes harvest distribution with custom bar charts, breaking down quantity by floral source.
+🏷️ Batch Tracker: Generates unique batchId for each log to ensure traceability from the forest to the final consumer.
+📈 Price Monitor: Compare real-time retail market prices and wholesale prices to understand bargaining power.
+🌱 Sustainable Harvest: Dedicated guidelines in English and Kannada to promote sustainable harvesting without harming the bee colony.
+🌐 Bilingual Support (English & Kannada): Full UI localization to ensure accessibility for tribal and rural users in Karnataka.
 
----
+🛠️ Tech Stack
+Platform: Android
+UI Framework: Jetpack Compose (Kotlin)
+Local Database: Room Persistence Library (Offline-first architecture)
+Architecture: MVVM (Model-View-ViewModel)
 
-## 2. Running the Backend Server
-The backend handles user authentication, harvest logging, and collective stock calculations.
+🚀 How to Run the Project Locally
+The application uses an offline-first architecture with a local Room Database. No backend server is required to run the core features.
 
-1.  Open your terminal and navigate to the backend directory:
-    ```bash
-    cd backend
-    ```
-2.  Install dependencies (if you haven't already):
-    ```bash
-    npm install
-    ```
-3.  Start the server:
-    ```bash
-    npm start
-    ```
-    *The server will run on `http://localhost:5000`.*
+Prerequisites
+Android Studio (Hedgehog or later recommended)
+Android SDK & Emulator (or a physical Android device)
+Setup Steps
 
----
+Clone the repository:
+git clone https://github.com/yourusername/jenu-gumpu.git
 
-## 3. Running the Android App
-The app is built using Jetpack Compose and connects to the backend server.
+Open the project:
+Launch Android Studio.
+Select Open and navigate to the cloned Jenu-Gumpu root directory.
+Sync Gradle: Wait for Android Studio to automatically sync the Gradle files.
 
-1.  Open **Android Studio**.
-2.  Select **Open** and choose the root `Project` folder.
-3.  Wait for Gradle to sync.
-4.  **Backend Configuration**:
-    - If using an **Android Emulator**, the app is pre-configured to use `http://10.0.2.2:5000/`.
-    - If using a **Physical Device**, update the `BASE_URL` in `app/src/main/java/com/example/mindmatrix/network/RetrofitClient.kt` to your computer's local IP address (e.g., `http://192.168.1.5:5000/`).
-5.  Select your device/emulator and click the **Run** button (green play icon).
+Run the app:
+Select your connected device or emulator from the top toolbar.
+Click the Run button (green play icon) or press Shift + F10.
 
----
+🎯 Impact Goals
+Tribal Empowerment: Improving the livelihoods and economic independence of forest-dwelling communities through fair pricing.
+Organic Growth: Promoting high-quality, "Forest-to-Table" chemical-free products.
+Sustainable Harvest: Educating users on ecological preservation and sustainable bee management.
 
-## 4. Troubleshooting
-- **Connection Refused**: Ensure the backend server is running *before* performing any actions in the app.
-- **Emulator Network**: Remember that the Emulator treats `localhost` as its own internal loopback. Use `10.0.2.2` to access the host machine.
-- **Kannada Font**: The app uses standard Android fonts. If Kannada text doesn't display correctly on a physical device, ensure the device supports Indic languages.
+📝 License
+This project was developed as part of the MindMatrix VTU Internship Program.
